@@ -21,7 +21,6 @@ LOCAL_SRC_FILES := \
 Mutex.cpp \
 Item.cpp \
 ThirdParty/sqlite3.c \
-eufe_wrap.cxx \
 Area.cpp \
 Attribute.cpp \
 Blob.cpp \
