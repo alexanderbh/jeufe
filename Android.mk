@@ -21,6 +21,7 @@ LOCAL_SRC_FILES := \
 Mutex.cpp \
 Item.cpp \
 ThirdParty/sqlite3.c \
+eufe_wrap.cxx \
 Area.cpp \
 Attribute.cpp \
 Blob.cpp \
@@ -39,7 +40,7 @@ EffectArmorRepairInterpreter.cpp \
 EffectByteCodeInterpreter.cpp \
 EffectEnergyDestabilizationNewInterpreter.cpp \
 EffectEnergyTransferInterpreter.cpp \
-EffecthardPointModifierEffectInterpreter.cpp \
+EffectHardPointModifierEffectInterpreter.cpp \
 EffectHullRepairInterpreter.cpp \
 EffectLeechInterpreter.cpp \
 EffectNaniteRepairPasteArmorDamageBonus.cpp \
