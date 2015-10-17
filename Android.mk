@@ -2,23 +2,23 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-NDK_TOOLCHAIN_VERSION := 4.8
+NDK_TOOLCHAIN_VERSION := clang
+
 
 LOCAL_MODULE := eufe
 LOCAL_CPP_EXTENSION := .cxx .cpp .cc .hpp
 
 LOCAL_CPP_FEATURES := exceptions rtti
 
+
+LOCAL_CPPFLAGS    := -std=c++11
 LOCAL_CPPFLAGS += -D _DEBUG
 LOCAL_CPPFLAGS += -D __GLIBC__
-LOCAL_CPPFLAGS += -D BOOST_ALL_NO_LIB
 
 LOCAL_LDLIBS += -latomic
 
-LOCAL_C_INCLUDES += D:\dev\tools\boost_1_57_0
 
 LOCAL_SRC_FILES := \
-Mutex.cpp \
 Item.cpp \
 ThirdParty/sqlite3.c \
 eufe_wrap.cxx \

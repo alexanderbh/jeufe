@@ -1,5 +1,5 @@
 #! /bin/sh
-BOOST_PATH=G:/boost_1_54_0
+#BOOST_PATH=G:/boost_1_54_0
 mkdir -p java/com/shimanski/eufe
 mkdir -p java/jni
 mkdir -p java/jni/ThirdParty
