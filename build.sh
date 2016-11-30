@@ -1,12 +1,14 @@
 #! /bin/sh
-#BOOST_PATH=G:/boost_1_54_0
-mkdir -p java/com/shimanski/eufe
+rm -r java
+mkdir -p java/dgmpp
 mkdir -p java/jni
 mkdir -p java/jni/ThirdParty
-swig -c++ -java -package com.shimanski.eufe -outdir java/com/shimanski/eufe -o java/jni/eufe_wrap.cxx eufe/eufe/swig/eufe.i
-cp eufe/eufe/*.cpp java/jni/
-cp eufe/eufe/*.h java/jni/
-cp eufe/eufe/ThirdParty/*.* java/jni/ThirdParty
+echo 'Running swig...'
+swig -c++ -java -package dgmpp -outdir java/dgmpp -o java/jni/eufe_wrap.cxx libdgmpp/swig/dgmpp.i
+cp libdgmpp/dgmpp/*.cpp java/jni/
+cp libdgmpp/dgmpp/*.h java/jni/
+cp libdgmpp/dgmpp/ThirdParty/*.* java/jni/ThirdParty
 cp Android.mk java/jni/Android.mk
 cp Application.mk java/jni/Application.mk
+echo 'Running ndk-build'
 ndk-build -C java/jni
